@@ -1,0 +1,20 @@
+[package]
+name = "ms-rpo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+zip = "0.6"
+rayon = "1.7.0"
+oxipng = { version = "8.0", features = ["parallel", "zopfli", "filetime"], default-features = false }
+clap = { version = "4.4.2", features = ["derive"] }
+sha1 = "0.6"
+serde_yaml = "0.9.25"
+serde_json = "1.0.105"
+tempdir = "0.3.7"
+
+[[bin]]
+name = "ms-rpo"
+path = "./src/main.rs"
